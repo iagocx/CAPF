@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-logo {
+    width: 100px;
+}
+
+.nav-item {
+    list-style: none;
+    display: flex;
+    font-size: 45px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.nav-items > li {
+    padding: 10px;
+}
+
+.ret {
+
+    background-color: cornflowerblue;
+    width:300px;
+    height: 100%;
+    text-align: justify;
+    float: right;
+    margin-right: 5%;
+}
+
+.body {
+    background-image: url("imagens/remax003.jpg");
+    background-repeat: no-repeat;
+}
+
+.main-div {
+    text-align:center;
+}
+
