@@ -7,12 +7,8 @@
 	<title>CAPF Menu</title>
 </head> 
 <body>
-    <script src="./javascript/pagina1.js"></script>
-    <!--
-    <h1>CAPF Menu</h1>-->
-    <h1>Menu Para Franqueado</h1>
+    <h1>Menu Para ADM</h1>
     <nav class="nav">
-    
         <ul>
             <li class="drop"><a href="#">Start</a>
                 <ul class="dropdown">
@@ -34,7 +30,7 @@
                 </ul>
             </li>
             <li><a href="#">alguma coisa</a>
-            <li><a href="#">Painel de Usuário</a>
+            <li class="drop"><a href="#">Painel de Usuário</a>
                 <ul class="dropdown">
                     <li><a href="#">Perfil</a></li>
                     <li><a href="#">Adicionar Usuários</a></li>
@@ -44,8 +40,19 @@
 
     <footer>
         <p class="main">
-            2017 © nayma.pl | Wszystkie prawa zastrzeżone | Design by <a href="https://nayma.pl" target="_blank">nayma.pl</a>
+            2017 |  |</a>
         </p>
     </footer>
+    <script>    
+        $(".drop").mouseover(
+            function() {
+                $(".dropdown", this).show(500);
+        });
+        $(".drop")
+        .mouseleave(
+            function() {
+                $(".dropdown", this).hide(300);
+        });
+    </script>
 </body>
 </html>

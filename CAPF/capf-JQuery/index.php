@@ -62,6 +62,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { // isset Verifica se uma 
 			<img src="./imagens/remax001.jpg" width="300" height="300" class="margin-left-50" />
 		</div>
 	</div>
+	
 </body>
 </html>
 
