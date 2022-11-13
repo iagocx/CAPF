@@ -10,7 +10,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { // isset Verifica se uma 
 		} else { 
 			$email = $mysqli->real_escape_string($_POST['email']);
             $senha = $mysqli->real_escape_string($_POST['senha']);
-			$sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+			$sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
 			$sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL : " . $mysqli->error);
 
 			$quantidade = $sql_query->num_rows;
@@ -19,10 +19,10 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { // isset Verifica se uma 
 				if(!isset($_SESSION)) {
 					session_start();
 				}
-				$_SESSION['id'] = $usuario['id'];
+				$_SESSION['cpf'] = $usuario['cpf'];
 				$_SESSION['nome'] = $usuario['nome'];
 
-				header("Location: pagina1.php");
+				header("Location: menuAdm.php");
 
 			} else {
 				echo "Falha ao logar! E-mail ou senha invalidos";
