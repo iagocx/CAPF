@@ -1,7 +1,7 @@
 <?php
 $usuario = 'root';
 $senha = '';
-$database = 'login';
+$database = 'capf';
 $host = 'localhost';
 
 $mysqli = new mysqli($host, $usuario, $senha, $database);
