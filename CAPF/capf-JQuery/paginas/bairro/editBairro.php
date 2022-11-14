@@ -2,7 +2,7 @@
 
 <?php
 // including the database connection file
-include_once("../conexao.php");
+include_once("../../conexao.php");
 
 if(isset($_POST['update'])){	
 	$name = $_POST['name'];
@@ -22,11 +22,11 @@ if(isset($_POST['update'])){
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<link href="../estilos/menu.css" type="text/css" rel="stylesheet">
-    <link href="../estilos/form.css" type="text/css" rel="stylesheet">
+	<link href="../../estilos/menu.css" type="text/css" rel="stylesheet">
+    <link href="../../estilos/form.css" type="text/css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>Edit Regiões do Brasil</title>
-    <script src="../js/valid-form.js"></script>
+    <script src="../../js/valid-form.js"></script>
     <!-- <script src="./js/form-etapas.js"></script> -->
 <head> 
 
@@ -65,7 +65,7 @@ if(isset($_POST['update'])){
                         </div>
                     </form>
                         <div class="link-inc">
-                            <a href='javascript:self.history.back();'>
+                            <a href='./viewRegiaoBrasil.php'><!--javascript:self.history.back();-->
                                 <button class="btn-clean btn-submit" type="submit">Voltar</button>
                             </a>
                         </div>

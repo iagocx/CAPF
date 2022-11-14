@@ -21,8 +21,10 @@ if(isset($_POST['email']) || isset($_POST['senha'])) { // isset Verifica se uma 
 				}
 				$_SESSION['cpf'] = $usuario['cpf'];
 				$_SESSION['nome'] = $usuario['nome'];
+				$_SESSION['tipo'] = $usuario['tipo'];
 
-				header("Location: menuAdm.php");
+
+				header("Location: menu.php");
 
 			} else {
 				echo "Falha ao logar! E-mail ou senha invalidos";

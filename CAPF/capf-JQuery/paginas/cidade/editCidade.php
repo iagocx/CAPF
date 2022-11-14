@@ -1,38 +1,38 @@
 <?php session_start(); ?>
 
+<?php
+// including the database connection file
+include_once("../../conexao.php");
+
+if(isset($_POST['update'])){	
+	$name = $_POST['name'];
+	$id = $_GET['id'];
+	// checking empty fields		
+	if(empty($name)) {
+		echo "<font color='red'>Name field is empty.</font><br/>";
+	} else {	
+		//updating the table
+		$result = mysqli_query($mysqli, "UPDATE regiaoBrasil SET nome='$name' WHERE id_regiaobrasil='$id'");	
+		//redirectig to the display page. In our case, it is view.php
+		header("Location: viewRegiaobrasil.php");
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<link href="../estilos/menu.css" type="text/css" rel="stylesheet">
-    <link href="../estilos/form.css" type="text/css" rel="stylesheet">
+	<link href="../../estilos/menu.css" type="text/css" rel="stylesheet">
+    <link href="../../estilos/form.css" type="text/css" rel="stylesheet">
 	<meta charset="UTF-8">
-	<title>Include Regiões do Brasil</title>
-    <script src="../js/valid-form.js"></script>
+	<title>Edit Regiões do Brasil</title>
+    <script src="../../js/valid-form.js"></script>
     <!-- <script src="./js/form-etapas.js"></script> -->
 <head> 
 
 <body>
-    <?php
-    include("../conexao.php");
-
-    if(isset($_POST['submit'])) {
-        $name = $_POST['name'];
-
-        if($name == "") {
-            echo "All fields should be filled. Either one or many fields are empty.";
-        } else {
-            $cpf = $_SESSION['cpf'];
-            mysqli_query($mysqli, "INSERT INTO regiaobrasil(id_RegiaoBrasil, nome, Adm_Usuario_cpf) VALUES('', '$name', '$cpf')")
-                or die("Could not execute the insert query.");
-            header('Location: ./viewRegiaoBrasil.php');   
-            echo "Registration successfully";
-            echo "<br/>";
-        }
-    } 
-?>
-
-    <!-- Sesão Formulário-->
-    <section id="formulario" class="section-content-row" >
+<!-- Sesão Formulário-->
+<section id="formulario" class="section-content-row" >
         <div class="content">
          <!-- Conteudo dos boxs -->
             <div class="container">
@@ -60,12 +60,13 @@
                         <div>
                             
                             <button class="btn-form btn-outilne" type="reset" etapa_numero="2">Limpar</button>
-                            <button class="btn-clean btn-submit" type="submit" name="submit">Enviar</button>
+                            <button class="btn-clean btn-submit" type="submit" name="update">Enviar</button>
+                            
                         </div>
                     </form>
                         <div class="link-inc">
-                            <a href='javascript:self.history.back();'>
-                                <button class="btn-clean btn-submit" type="submit" >Voltar</button>
+                            <a href='./viewRegiaoBrasil.php'><!--javascript:self.history.back();-->
+                                <button class="btn-clean btn-submit" type="submit">Voltar</button>
                             </a>
                         </div>
                     </section>

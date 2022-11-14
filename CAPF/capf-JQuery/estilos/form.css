@@ -21,6 +21,8 @@ body {
     font-family: 'Mulish', sans-serif;
     margin: 0px;
     box-sizing: box-sizing;
+    background-color: #22374c;
+	color:#777;;
 }
 
 .main {
@@ -353,6 +355,7 @@ ul {
 
 .sub-title {
     font-size: 1.2rem;
+
 }
 
 /* Seleciona o primeiro span da classe .sub-title */
@@ -513,7 +516,6 @@ ul {
 
 .title-section {
     text-align: left;
-    padding-bottom: 2rem;
     color: white;
 }
 
