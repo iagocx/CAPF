@@ -1,9 +1,0 @@
-Na opção do react usar:
-	npm create vite@latest
-para crir o projeto e depois jogar os arquivos no projeto.
-----------------------------------------------------------------
-Na opção do JQuery instalar ele:
-	npm install jquery
-depois colocar o caminho certo no html nesse local:
-	<head>
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
